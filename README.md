@@ -1,5 +1,7 @@
 # Spotify to YouTube Music Migration Tool
 
+[![GitHub](https://img.shields.io/badge/GitHub-MrUnknownDE%2Fsptify2yt-blue?logo=github)](https://github.com/MrUnknownDE/sptify2yt)
+
 A Node.js web application that migrates your Spotify playlists to YouTube Music with a preview and review workflow.
 
 ## ✨ Features
@@ -39,7 +41,8 @@ A Node.js web application that migrates your Spotify playlists to YouTube Music 
 ### Option 1: Local Development
 
 ```bash
-# Clone and enter directory
+# Clone the repository
+git clone https://github.com/MrUnknownDE/sptify2yt.git
 cd sptify2yt
 
 # Install dependencies
@@ -58,15 +61,25 @@ Open http://localhost:3000 in your browser.
 ### Option 2: Docker
 
 ```bash
+# Clone the repository
+git clone https://github.com/MrUnknownDE/sptify2yt.git
+cd sptify2yt
+
 # Copy and configure environment
 cp .env.example .env
 nano .env
 
 # Build and run
 docker compose up -d
+
+# View logs (optional)
+docker compose logs -f
 ```
 
 Open http://localhost:3000 in your browser.
+
+To stop: `docker compose down`
+
 
 ## ⚙️ Configuration
 
