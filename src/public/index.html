@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Migrate your Spotify playlists to YouTube Music with ease">
+  <title>Spotify to YouTube Music | Playlist Migration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-spotify">🎵</span>
+        <span class="logo-arrow">→</span>
+        <span class="logo-youtube">🎬</span>
+        <h1>Spotify to YouTube Music</h1>
+      </div>
+      <button id="logoutBtn" class="btn btn-ghost" style="display: none;">
+        Logout
+      </button>
+    </header>
+
+    <!-- Login View -->
+    <section id="loginView" class="view">
+      <div class="login-container">
+        <h2>Connect Your Accounts</h2>
+        <p class="subtitle">Login to both services to start migrating your playlists</p>
+
+        <div class="auth-cards">
+          <div class="auth-card spotify-card">
+            <div class="auth-card-header">
+              <span class="service-icon">🎵</span>
+              <span class="service-name">Spotify</span>
+            </div>
+            <div id="spotifyStatus" class="auth-status">
+              <span class="status-indicator disconnected"></span>
+              <span class="status-text">Not connected</span>
+            </div>
+            <button id="spotifyLoginBtn" class="btn btn-spotify">
+              Login with Spotify
+            </button>
+          </div>
+
+          <div class="auth-card youtube-card">
+            <div class="auth-card-header">
+              <span class="service-icon">🎬</span>
+              <span class="service-name">YouTube Music</span>
+            </div>
+            <div id="youtubeStatus" class="auth-status">
+              <span class="status-indicator disconnected"></span>
+              <span class="status-text">Not connected</span>
+            </div>
+            <button id="youtubeLoginBtn" class="btn btn-youtube">
+              Login with YouTube
+            </button>
+          </div>
+        </div>
+
+        <button id="continueBtn" class="btn btn-primary btn-large" style="display: none;">
+          Continue to Playlists
+        </button>
+      </div>
+    </section>
+
+    <!-- Playlist Selection View -->
+    <section id="playlistView" class="view" style="display: none;">
+      <div class="playlist-container">
+        <div class="view-header">
+          <h2>Select a Playlist</h2>
+          <p class="subtitle">Choose a Spotify playlist to migrate to YouTube Music</p>
+        </div>
+
+        <div id="playlistGrid" class="playlist-grid">
+          <div class="loading-spinner">Loading playlists...</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Analysis View (NEW) -->
+    <section id="analysisView" class="view" style="display: none;">
+      <div class="analysis-container">
+        <button id="backFromAnalysis" class="btn btn-ghost back-btn">
+          ← Back to playlists
+        </button>
+
+        <div class="playlist-header">
+          <img id="analysisPlaylistImage" class="playlist-cover" src="" alt="Playlist cover">
+          <div class="playlist-info">
+            <h2 id="analysisPlaylistName"></h2>
+            <p id="analysisPlaylistCount" class="track-count"></p>
+          </div>
+          <button id="startAnalysisBtn" class="btn btn-primary">
+            🔍 Analyze Playlist
+          </button>
+        </div>
+
+        <!-- Analysis Progress -->
+        <div id="analysisProgress" class="analysis-progress" style="display: none;">
+          <div class="progress-header">
+            <span class="pulse"></span>
+            <span id="analysisStatusText">Analyzing tracks...</span>
+          </div>
+          <div class="progress-bar-container">
+            <div id="analysisProgressBar" class="progress-bar" style="width: 0%"></div>
+          </div>
+          <p class="progress-detail"><span id="analysisCurrentTrack"></span></p>
+        </div>
+
+        <!-- Analysis Results -->
+        <div id="analysisResults" class="analysis-results" style="display: none;">
+          <div class="results-header">
+            <h3>Analysis Complete</h3>
+            <div class="results-stats">
+              <span class="stat found"><span id="statFound">0</span> found</span>
+              <span class="stat not-found"><span id="statNotFound">0</span> not found</span>
+            </div>
+          </div>
+
+          <div class="comparison-table">
+            <div class="table-header">
+              <div class="col-spotify">Spotify Track</div>
+              <div class="col-status">Status</div>
+              <div class="col-youtube">YouTube Match</div>
+            </div>
+            <div id="comparisonList" class="table-body"></div>
+          </div>
+
+          <div class="migration-actions">
+            <button id="startMigrationBtn" class="btn btn-primary btn-large">
+              🚀 Start Migration
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Progress View -->
+    <section id="progressView" class="view" style="display: none;">
+      <div class="progress-container">
+        <h2>Migration in Progress</h2>
+
+        <div class="progress-stats">
+          <div class="stat">
+            <span id="progressCurrent" class="stat-value">0</span>
+            <span class="stat-label">/ <span id="progressTotal">0</span> tracks</span>
+          </div>
+        </div>
+
+        <div class="progress-bar-container">
+          <div id="progressBar" class="progress-bar" style="width: 0%"></div>
+        </div>
+
+        <div id="currentTrack" class="current-track">
+          <span class="pulse"></span>
+          <span id="currentTrackName">Preparing...</span>
+        </div>
+
+        <div id="progressLog" class="progress-log"></div>
+
+        <div id="migrationComplete" class="migration-complete" style="display: none;">
+          <div class="complete-icon">✓</div>
+          <h3>Migration Complete!</h3>
+          <p id="completeStats"></p>
+          <a id="playlistLink" href="#" target="_blank" class="btn btn-youtube btn-large">
+            Open in YouTube Music
+          </a>
+          <button id="newMigrationBtn" class="btn btn-ghost">
+            Migrate another playlist
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

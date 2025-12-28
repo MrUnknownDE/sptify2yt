@@ -1,0 +1,134 @@
+{
+  "id": "job_1766940808819_at6tdppx0",
+  "sessionId": "session_1766940791190_wjvz0ueby",
+  "playlist": {
+    "id": "6EmJB6Dtfrk54qBMJzyEHx",
+    "name": "pfank repeat",
+    "image": "https://mosaic.scdn.co/640/ab67616d00001e027e44b3c24e2bdef9928ce6c2ab67616d00001e02d43e8f24d477790a78c7b58fab67616d00001e02d5c0a5bc4afd1d9d16cac98eab67616d00001e02e908735737ca3e20be619da1"
+  },
+  "tracks": [
+    {
+      "spotifyId": "3f9RTvoln0k1FnIS5edKqD",
+      "name": "EASY PEAZY - Slowed & Reverb",
+      "artists": [
+        "ROMANTICA",
+        "Lestmor"
+      ],
+      "album": "EASY PEAZY (Slowed & Sped Up)",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "1yqaea9PLO8rttUlcNTlcB",
+      "name": "Komarovo (DVRST Phonk Remix)",
+      "artists": [
+        "DVRST",
+        "Igor Sklyar",
+        "Atomic Heart"
+      ],
+      "album": "Atomic Heart (Original Game Soundtrack) Vol.1",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "0C6DzlnpBBZ4T5KFFtNNQI",
+      "name": "STUCK IN A DAZE - SLOWED",
+      "artists": [
+        "SHIIIKARNO"
+      ],
+      "album": "STUCK IN A DAZE (SLOWED)",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "7ItZPW34p9g5hEBCRw5GOK",
+      "name": "Yours",
+      "artists": [
+        "EVILDXER"
+      ],
+      "album": "Yours",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "25u4PT1CAUcHwe3YQ3JfrH",
+      "name": "sorry mom, i'm making breakcore xd",
+      "artists": [
+        "usedcvnt"
+      ],
+      "album": "ultraviolet",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "0WVwOSGn9J8Ccq5wuBDLmJ",
+      "name": "143 ways to lose urself",
+      "artists": [
+        "usedcvnt"
+      ],
+      "album": "ultraviolet",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "0MFl9YQsAgxpBtEpXK8UA1",
+      "name": "wonderfulcore",
+      "artists": [
+        "usedcvnt"
+      ],
+      "album": "wonderfulcore",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "2p3LCdEMlQgs2ciXS3KIlM",
+      "name": "wake up Violet",
+      "artists": [
+        "usedcvnt"
+      ],
+      "album": "wonderfulcore",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "1e6ZXuLRtWnXhwvJftJYuB",
+      "name": "EASY PEAZY",
+      "artists": [
+        "ROMANTICA",
+        "Lestmor"
+      ],
+      "album": "EASY PEAZY",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    },
+    {
+      "spotifyId": "5Y4OwloGr9QSxZLZ5DXGte",
+      "name": "Broken Trust",
+      "artists": [
+        "SAY3AM",
+        "Staarz"
+      ],
+      "album": "Broken Trust",
+      "youtubeMatch": null,
+      "manualVideoId": null,
+      "status": "not_found"
+    }
+  ],
+  "status": "complete",
+  "progress": {
+    "current": 10,
+    "total": 10
+  },
+  "createdAt": 1766940808819,
+  "completedAt": 1766940827781,
+  "error": null
+}
